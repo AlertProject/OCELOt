@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/alertwp3/!svn/ver/29/trunk/OCELOt/war/WEB-INF
+END
+logging.properties
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/alertwp3/!svn/ver/29/trunk/OCELOt/war/WEB-INF/logging.properties
+END
+appengine-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/alertwp3/!svn/ver/29/trunk/OCELOt/war/WEB-INF/appengine-web.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/alertwp3/!svn/ver/29/trunk/OCELOt/war/WEB-INF/web.xml
+END

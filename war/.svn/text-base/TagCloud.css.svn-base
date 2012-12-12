@@ -1,0 +1,183 @@
+body{
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  font-size: small;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  
+  width: 400px;
+}
+.gwt-DialogBox .Caption {
+  background: #72A0CD;
+  padding: 4px 8px 4px 4px;
+  cursor: default;
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  font-weight: bold;
+  border-bottom: 1px solid #101861;
+  border-top: 1px solid #101861;
+}
+.gwt-DialogBox .dialogMiddleCenter {
+  padding: 3px;
+  background-color: #F0F7FE;
+  border: 2px solid #101861;
+}
+
+button {
+  margin: 15px 6px 6px;
+  background: #8A0808;
+  border: 1px solid #3B0B0B;
+  color: #fff;
+  border-radius: 7px 7px 7px 7px;
+  font-weight: bold;
+}
+  
+button:hover {
+   background: #E2E7E1;
+   color: #5D645C;
+}
+
+button.active {
+   background: #E6D794;
+   color: #544814;
+}
+button.inactive {
+   background: #8A0808;
+   color: #fff;
+}
+
+button:disabled{
+	background: #F3F7F3;
+    color: #BBBBBB;
+}
+
+.cloudPanel {  
+     text-align : center;  
+     margin : 50px auto;  
+     padding : 10px;   
+     line-height : 1.5em;  
+     width: 630px;
+     background-color : #F1F8E0;
+	border:1px solid #5FB404;  
+}
+.cloud1 {  
+	text-align : center;  
+	padding : -1px;   
+	margin:-1px;
+	line-height : 1.5em; 
+	width: 600px;
+	text-align : center;
+	
+}
+.tabPanelStyle {
+	margin-top:80px;
+	padding: 0 3em;	
+  	cursor: default;
+  	margin-right: 2px;
+  	margin-left: 2px; 
+  	border:0px;
+}
+
+.gwt-TabBar {
+	font-weight: bold;
+	font-size: 1.0em;
+	color: #ccc;
+	width: 400px;
+
+}
+
+.gwt-TabBarItem-wrapper {
+  padding: 5px;
+  cursor: pointer;
+  background-color: #F1F8E0;
+  color: #767C78;
+  border-bottom: 2px solid #5FB404;
+  margin: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.gwt-TabBarItem-wrapper-selected{
+	padding: 5px;
+	margin: 5px;
+  	font-weight: bold;
+  	color: #E6F1E9;
+  	cursor: default;
+  	background-color: #5FB404;
+  	border-radius: 10px 10px 10px 10px;
+}
+.gwt-TabPanelBottom{
+	padding: 4px;
+	 background-color: #F1F8E0;
+}
+
+.verticaltextcolor2 {
+	-webkit-transform: rotate(90deg);
+	padding : 10px;
+	color : #5F4C0B;
+}
+.verticaltextcolor1 {
+	-webkit-transform: rotate(-90deg);
+	padding : 10px;
+	color : #5F4C0B;
+}
+.styleCheck {
+ color : #FA5858;
+}
+.color1 {
+  color : #5F4C0B;
+  float : left;  
+  padding : 5px;  
+}
+
+.color2 {
+  color:#B18904;
+  float : left;  
+  padding : 5px;  
+}
+.color3 {
+  color:#E1A902;
+  float : left;  
+	padding : 5px;  
+}
+.color4 {
+  color:#CDB872;
+  float : left;  
+	padding : 5px;  
+}
+.color5 {
+  color:#2A1B0A;
+  float : left;  
+	padding : 5px;  
+}
+.color6 {
+  color:#2A1B4A;
+  float : left;  
+	padding : 5px;  
+}
+.color7 {
+  color:#8A4B08;
+  float : left;  
+	padding : 5px;  
+  }
+.color8 {
+  color:#8A2908;
+  float : left;  
+	padding : 5px;  
+
+}
+.color9 {
+  color:#DF3A01;
+  float : left;  
+	padding : 5px;  
+}
+.color10 { 
+  color:#DF7401;
+  float : left;  
+	padding : 5px;  
+}

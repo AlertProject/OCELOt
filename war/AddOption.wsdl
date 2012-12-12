@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://service.conceptmanagement.atosresearch.eu" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax23="http://sql.java/xsd" xmlns:ax21="http://io.java/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.conceptmanagement.atosresearch.eu">
+    <wsdl:documentation>ConceptManagementService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sql.java/xsd">
+            <xs:complexType name="SQLException">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SQLState" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="errorCode" type="xs:int"/>
+                    <xs:element minOccurs="0" name="nextException" nillable="true" type="ax23:SQLException"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax24="http://sql.java/xsd" xmlns:ax22="http://io.java/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.conceptmanagement.atosresearch.eu">
+            <xs:import namespace="http://io.java/xsd"/>
+            <xs:import namespace="http://sql.java/xsd"/>
+            <xs:element name="ConceptManagementServiceIOException">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="IOException" nillable="true" type="ax21:IOException"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConceptManagementServiceClassNotFoundException">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ClassNotFoundException" nillable="true" type="xs:anyType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConceptManagementServiceSQLException">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="SQLException" nillable="true" type="ax23:SQLException"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addNewConcept">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="concept" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="lemma" nillable="true" type="xs:string"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="sameAs" nillable="true" type="xs:string"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="subClass" nillable="true" type="xs:string"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="superClass" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="useLemma" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addNewConceptResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+            <xs:complexType name="IOException">
+                <xs:sequence/>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="addNewConceptRequest">
+        <wsdl:part name="parameters" element="ns:addNewConcept"/>
+    </wsdl:message>
+    <wsdl:message name="addNewConceptResponse">
+        <wsdl:part name="parameters" element="ns:addNewConceptResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ConceptManagementServiceIOException">
+        <wsdl:part name="parameters" element="ns:ConceptManagementServiceIOException"/>
+    </wsdl:message>
+    <wsdl:message name="ConceptManagementServiceClassNotFoundException">
+        <wsdl:part name="parameters" element="ns:ConceptManagementServiceClassNotFoundException"/>
+    </wsdl:message>
+    <wsdl:message name="ConceptManagementServiceSQLException">
+        <wsdl:part name="parameters" element="ns:ConceptManagementServiceSQLException"/>
+    </wsdl:message>
+    <wsdl:portType name="ConceptManagementServicePortType">
+        <wsdl:operation name="addNewConcept">
+            <wsdl:input message="ns:addNewConceptRequest" wsaw:Action="urn:addNewConcept"/>
+            <wsdl:output message="ns:addNewConceptResponse" wsaw:Action="urn:addNewConceptResponse"/>
+            <wsdl:fault message="ns:ConceptManagementServiceIOException" name="ConceptManagementServiceIOException" wsaw:Action="urn:addNewConceptConceptManagementServiceIOException"/>
+            <wsdl:fault message="ns:ConceptManagementServiceClassNotFoundException" name="ConceptManagementServiceClassNotFoundException" wsaw:Action="urn:addNewConceptConceptManagementServiceClassNotFoundException"/>
+            <wsdl:fault message="ns:ConceptManagementServiceSQLException" name="ConceptManagementServiceSQLException" wsaw:Action="urn:addNewConceptConceptManagementServiceSQLException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ConceptManagementServiceSoap11Binding" type="ns:ConceptManagementServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addNewConcept">
+            <soap:operation soapAction="urn:addNewConcept" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ConceptManagementServiceClassNotFoundException">
+                <soap:fault use="literal" name="ConceptManagementServiceClassNotFoundException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ConceptManagementServiceSQLException">
+                <soap:fault use="literal" name="ConceptManagementServiceSQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ConceptManagementServiceIOException">
+                <soap:fault use="literal" name="ConceptManagementServiceIOException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ConceptManagementServiceSoap12Binding" type="ns:ConceptManagementServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addNewConcept">
+            <soap12:operation soapAction="urn:addNewConcept" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ConceptManagementServiceClassNotFoundException">
+                <soap12:fault use="literal" name="ConceptManagementServiceClassNotFoundException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ConceptManagementServiceSQLException">
+                <soap12:fault use="literal" name="ConceptManagementServiceSQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ConceptManagementServiceIOException">
+                <soap12:fault use="literal" name="ConceptManagementServiceIOException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ConceptManagementServiceHttpBinding" type="ns:ConceptManagementServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="addNewConcept">
+            <http:operation location="addNewConcept"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ConceptManagementService">
+        <wsdl:port name="ConceptManagementServiceHttpSoap11Endpoint" binding="ns:ConceptManagementServiceSoap11Binding">
+            <soap:address location="http://172.24.55.76:8080/axis2/services/ConceptManagementService.ConceptManagementServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ConceptManagementServiceHttpSoap12Endpoint" binding="ns:ConceptManagementServiceSoap12Binding">
+            <soap12:address location="http://172.24.55.76:8080/axis2/services/ConceptManagementService.ConceptManagementServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ConceptManagementServiceHttpEndpoint" binding="ns:ConceptManagementServiceHttpBinding">
+            <http:address location="http://172.24.55.76:8080/axis2/services/ConceptManagementService.ConceptManagementServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

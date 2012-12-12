@@ -1,0 +1,5 @@
+ocelot.db=ocelot
+ocelot.user=root
+ocelot.password= 
+ocelot.host=localhost:3306
+service.endpoint = http://192.168.252.18:8080/axis2/services/ConceptManagementService?wsdl
