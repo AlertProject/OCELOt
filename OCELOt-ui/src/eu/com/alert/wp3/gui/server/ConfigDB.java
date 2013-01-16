@@ -1,0 +1,51 @@
+package eu.com.alert.wp3.gui.server;
+
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+
+public class ConfigDB 
+{
+	public ConfigDB()
+	{
+		System.err.println("ConfigDB");
+	}
+	
+
+	@SuppressWarnings("null")
+	public String[] readFile()
+	{
+		File file = new File("../webapps/OCELOt-ui/ocelot-ui.txt");
+		
+		String[] conection = null;
+		try
+		{
+			System.err.println(" ********* I GOT FILE ********* ");
+			conection = new String[5];
+			FileInputStream fis = new FileInputStream(file);
+			BufferedInputStream bis = new BufferedInputStream(fis);
+			DataInputStream dis = new DataInputStream(bis);
+			
+			String data = "";
+			
+			int cont = 0;
+			while (dis.available() != 0) 
+			{
+				String info =  dis.readLine();
+				String[] datatemp = info.split("=");
+				data = datatemp[1];
+				System.err.println("OBTENGO ----> "+data +" <-------------");
+				conection[cont] = data;
+				cont++;
+			}
+		}
+		catch(IOException e) 
+		{
+			e.printStackTrace();
+		}
+		return conection;
+	}
+}

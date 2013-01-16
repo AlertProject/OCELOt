@@ -1,0 +1,2 @@
+serviceClass: eu.com.alert.wp3.gui.client.ConnectionDB
+path: F1D2AAD3E9AB4F448D2298C5546BD096.gwt.rpc

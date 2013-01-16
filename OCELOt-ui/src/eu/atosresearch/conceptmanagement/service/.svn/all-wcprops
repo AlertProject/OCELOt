@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service
+END
+ConceptManagementServiceIOExceptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceIOExceptionException.java
+END
+ConceptManagementServiceIOException.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceIOException.java
+END
+ConceptManagementServiceClassNotFoundExceptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceClassNotFoundExceptionException.java
+END
+ConceptManagementServiceCallbackHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceCallbackHandler.java
+END
+ConceptManagementServiceSQLException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceSQLException.java
+END
+AddNewConceptResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/AddNewConceptResponse.java
+END
+ConceptManagementService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementService.java
+END
+AddNewConcept.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/AddNewConcept.java
+END
+ConceptManagementServiceStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceStub.java
+END
+ConceptManagementServiceSQLExceptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceSQLExceptionException.java
+END
+ConceptManagementServiceClassNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/alertwp3/!svn/ver/32/trunk/OCELOt/src/eu/atosresearch/conceptmanagement/service/ConceptManagementServiceClassNotFoundException.java
+END
