@@ -1,0 +1,6 @@
+<service name="ConceptManagementService">
+<parameter name="ServiceClass" locked="false">eu.atosresearch.conceptmanagement.service.ConceptManagementService</parameter>
+<operation name="addNewConcept">
+<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+</operation>
+</service>
